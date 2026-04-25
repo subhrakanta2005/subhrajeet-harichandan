@@ -243,13 +243,25 @@ nav.scrolled{
 }
 .about-img-wrap{position:relative;display:flex;}
 .about-card{
-  width:360px;height:460px;
-  border-radius:24px;
-  background:linear-gradient(145deg,rgba(180,79,255,.15),rgba(0,245,255,.08));
-  border:1px solid rgba(180,79,255,.25);
-  display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;
-  flex-shrink:0;
+  width: 360px;
+  height: 460px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo{
+  width: 88%;
+  height: 84%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 2;
 }
 .about-card::before{
   content:'';position:absolute;inset:-50%;
@@ -375,9 +387,20 @@ nav.scrolled{
 .bk3{--card-accent:rgba(180,79,255,.5);--card-glow:rgba(180,79,255,.15);}
 
 .book-cover{
-  height:280px;position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;flex-direction:column;
-  padding:2rem;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  border-radius: 24px 24px 0 0;
+}
+
+.book-cover-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+  border-radius: 24px 24px 0 0;
 }
 .bk1 .book-cover{background:linear-gradient(135deg,#1a0020,#2d0040,#1a0020);}
 .bk2 .book-cover{background:linear-gradient(135deg,#001a1a,#002d35,#001a1a);}
@@ -707,7 +730,7 @@ footer{
       <div class="about-card">
         <div class="about-deco-ring ring1"></div>
         <div class="about-deco-ring ring2"></div>
-        <span class="about-initials">SH</span>
+        <img src="./images/about-photo.jpg" alt="Subhrajeet Harichandan" class="about-photo">
       </div>
       <div class="float-badge badge-published">✨ 3+ Books Published</div>
       <div class="float-badge badge-year">📅 Since 2022</div>
@@ -753,7 +776,7 @@ footer{
         <div class="cover-shine"></div>
         <div class="cover-text">
           <span class="ct-title">Love Will<br>Find You</span>
-          <span class="ct-sub">— A Novel —</span>
+          <img src="./images/love will find you photo.jpg" alt="Love Will Find You book cover" class="book-cover-img">
         </div>
       </div>
       <div class="book-body">
@@ -776,7 +799,7 @@ footer{
         <div class="cover-shine"></div>
         <div class="cover-text">
           <span class="ct-title">Can You<br>Comfort<br>My Aches</span>
-          <span class="ct-sub">— Poetry —</span>
+          <img src="./images/comfort my aches photo.jpg" alt="Can You Comfort My Aches book cover" class="book-cover-img">
         </div>
       </div>
       <div class="book-body">
@@ -799,7 +822,7 @@ footer{
         <div class="cover-shine"></div>
         <div class="cover-text">
           <span class="ct-title">I Had You</span>
-          <span class="ct-sub">— A Story —</span>
+          <img src="./images/i had you photo.jpg" alt="I Had You book cover" class="book-cover-img">
         </div>
       </div>
       <div class="book-body">
