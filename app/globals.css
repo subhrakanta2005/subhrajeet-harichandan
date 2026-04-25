@@ -1,0 +1,57 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --ink: #0a0a0f;
+  --paper: #f5f0e8;
+  --gold: #c9a84c;
+  --gold-light: #e8c96a;
+  --rust: #c04b2e;
+  --ghost: rgba(201, 168, 76, 0.08);
+}
+
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;1,300&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #0a0a0f;
+  color: #f5f0e8;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.5;
+}
+
+a { cursor: none; }
+button { cursor: none; }
+
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: #f5f0e8;
+}
